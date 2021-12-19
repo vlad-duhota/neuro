@@ -1069,4 +1069,28 @@ text-align: center;
         width: 100%;
 
     }
+    
+     .section-img{
+        width: 80%;
+    }
+
+    .hero-btn{
+        width: 100%;
+    }
+
+    .hero-title{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+
+}
+
+@media(max-width:397px){
+    .product-section:nth-child(1)::before,
+    .product-section:nth-child(2)::before,
+    .science::before{
+        top: -11.0vh;  
+    }
+    
 }
