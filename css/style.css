@@ -1,5 +1,8 @@
 /* global styles */
 
+html {
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +20,7 @@
 
 a{
     text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ul{
@@ -46,6 +50,7 @@ ul{
     position: absolute;
     right: 40px;
     transition: 0.3s;
+    width: 30px;
 }
 
 .cart:hover{
@@ -196,19 +201,19 @@ ul{
     color: #fff;
     padding: 30px;
     align-items: center;
-    position: absolute;
-    z-index: 2;
+    position: fixed;
+    z-index: 5;
     left: 0;
     bottom: 5vh;
     transition: left 0.3s;
 }
 
 .cookies-ckeckbox{
-    position: absolute;
+    position: fixed;
     bottom: 8vh;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 6;
     width: 150px;
     height: 40px;
     opacity: 0;
@@ -379,7 +384,6 @@ ul{
 
 /* product section */
 
-
 .product-section:first-child{
     background: #005466;
 }
@@ -414,6 +418,8 @@ ul{
     position: absolute;
     top: -13vh; 
 }
+
+
 
 .product-section{
     height: 100vh;
@@ -720,13 +726,6 @@ ul{
 .got-it{
     margin: 20px auto 0;
 }
-
-.learn-more{
-    display: block;
-    padding: 0;
-    margin-top: 10px;
-}
-
 }
 
 @media (max-width:768px) {
@@ -950,10 +949,9 @@ text-align: center;
         font-size: 30px;
     }   
 
-
-
     .menu-list{
         height: 100%;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         align-content: space-around;
@@ -1067,7 +1065,11 @@ text-align: center;
 
     .footer-content{
         width: 100%;
+        
+    }
 
+    .footer-content h2{
+        font-size: 40px !important;
     }
     
      .section-img{
@@ -1077,12 +1079,18 @@ text-align: center;
     .hero-btn{
         width: 100%;
     }
+    .footer-btn{
+        width: 100%;
+    }
 
     .hero-title{
         font-size: 35px;
         line-height: 40px;
     }
 
+    .product-btn{
+        width: 100%;
+    }
 
 }
 
@@ -1093,4 +1101,19 @@ text-align: center;
         top: -11.0vh;  
     }
     
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    padding: 10px;
+    background: #005466;
+    border-radius: 20px;
+    border: 5px solid #fff;
 }
